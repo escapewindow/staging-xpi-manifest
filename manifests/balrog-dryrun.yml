@@ -1,5 +1,5 @@
 ---
-description: Balrog dry run to test the system add-on release process test
+description: Balrog dry run to test the system add-on release process.
 repo-prefix: balrogdryrun
 active: true
 private-repo: false
