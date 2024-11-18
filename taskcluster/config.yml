@@ -146,7 +146,7 @@ workers:
             provisioner: scriptworker-k8s
             implementation: scriptworker-signing
             os: scriptworker
-            worker-type: xpi-t-signing
+            worker-type: xpi-t-signing-dev
         github:
             provisioner: scriptworker-k8s
             implementation: scriptworker-github
@@ -169,7 +169,7 @@ workers:
             worker-type:
                 by-level:
                     "3": xpi-3-signing
-                    default: xpi-t-signing
+                    default: xpi-t-signing-dev
         shipit:
             provisioner: scriptworker-k8s
             implementation: scriptworker-shipit
@@ -185,11 +185,11 @@ scriptworker:
     scope-prefix: project:xpi:releng
     signing-format:
         by-xpi-type:
-            mozillaonline-privileged: privileged_webextension
-            privileged: privileged_webextension
-            system: system_addon
+            mozillaonline-privileged: stage_privileged_webextension
+            privileged: stage_privileged_webextension
+            system: stage_system_addon
             # normandy-privileged is deprecated
-            normandy-privileged: privileged_webextension
+            normandy-privileged: stage_privileged_webextension
 
 release-promotion:
     flavors:
